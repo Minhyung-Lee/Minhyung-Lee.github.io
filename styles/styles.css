@@ -1,0 +1,149 @@
+/* body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.navbar {
+	background-color: #333;
+	overflow: hidden;
+	width: 100%;
+	position: fixed;
+	top: 0;
+}
+
+.navbar h1 {
+	color: white;
+	margin: 0;
+	padding: 10px;
+}
+
+.navbar ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.navbar li {
+	float: left;
+}
+
+.navbar li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.navbar li a:hover {
+	background-color: #111;
+}
+
+.title-bar {
+	background-color: #f1f1f1;
+	padding: 20px;
+	text-align: center;
+	margin-top: 70px;
+	/
+
+.title-bar h2 {
+	margin: 0;
+}
+
+svg {
+	display: block;
+	margin: 0 auto;
+}
+
+#scene-1-container,
+#scene-2-container,
+#scene-3-container,
+#scene-4-container {
+	width: 100%;
+}
+
+#scene-1-container p,
+#scene-2-container p,
+#scene-3-container p,
+#scene-4-container p {
+	max-width: 800px;
+	margin: 0 auto;
+} */
+
+body {
+	font-family: Arial, sans-serif;
+}
+
+.hidden {
+	display: none;
+}
+
+.dimmed {
+	opacity: 0.2;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.navbar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.nav-link {
+	display: inline-block;
+
+	text-align: center;
+	padding: 10px 15px;
+}
+
+.nav-link:hover {
+	background-color: lightblue;
+}
+
+.title-bar {
+	text-align: center;
+	padding: 20px 0;
+}
+
+#scene-1-container {
+	flex-direction: column;
+	/* Changed from row to column */
+	align-items: center;
+	/* Center items horizontally */
+}
+
+#scene-1-container p,
+#exoplanet-gif {
+	margin: 20px 0;
+	/* Add vertical margin */
+}
+
+#exoplanet-description {
+	margin-top: 10px;
+	text-align: center;
+}
+
+#discovery-over-time {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#discovery-over-time button {
+	margin: 0 10px;
+}
+
+button {
+	cursor: pointer;
+}

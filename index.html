@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Stellar Quest: Discovering the Exoplanetary Universe</title>
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+	<link rel="stylesheet" href="styles/annotations.css">
+	<link rel="stylesheet" href="styles/styles.css">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+
+		.hidden {
+			display: none;
+		}
+
+		.dimmed {
+			opacity: 0.2;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="navbar">
+			<h1>Stellar Quest: Discovering the Exoplanetary Universe</h1>
+			<ul>
+				<li><a href="#scene-1-container" class="nav-link">Introduction</a></li>
+				<li><a href="#scene-2-container" class="nav-link">Navigating the Spectrum</a></li>
+				<li><a href="#scene-3-container" class="nav-link">Exploring Exoplanets</a></li>
+				<li><a href="#scene-4-container" class="nav-link">Comparative Exploration</a></li>
+			</ul>
+		</div>
+
+		<!-- <div class="title-bar">
+			<h2></h2>
+		</div> -->
+
+
+		<div id="scene-1-container">
+			<h1>Introduction to Exoplanets</h1>
+			<p>Welcome to "Stellar Quest", a narrative exploration into the captivating world of exoplanets. For
+				centuries, humans have
+				looked up at the night sky, wondering about the myriad worlds that might exist beyond our solar system.
+				With the advent
+				of modern telescopes and space missions, we've embarked on an incredible journey of discovery, finding
+				thousands of
+				exoplanets—planets that orbit stars outside of our solar system. These distant worlds come in a wide
+				range of
+				compositions and characteristics, from rocky planets like Earth to gas giants like Jupiter. While direct
+				imaging is
+				rare, astronomers employ various indirect methods, such as measuring the dimming of stars during
+				planetary transits or
+				observing subtle Doppler shifts in starlight, allowing us to discover and analyze these incredible
+				exoplanets. One
+				notable example is the TRAPPIST-1 system, where seven Earth-sized planets have been identified and
+				studied based on
+				their influence on each other's orbits and the properties of their host star. Through these discoveries,
+				we gain
+				invaluable insights not only into these intriguing alien worlds but also into our own home planet and
+				its place in the
+				vast cosmic arena. In this interactive visual journey, we invite you to explore the fascinating
+				diversity and patterns
+				found in the exoplanets we've discovered so far.</p>
+			<div>
+				<img src="images/Hr8799_orbit_hd.gif" alt="GIF of four exoplanets orbiting with host star" id="exoplanet-gif" />
+				<p id="exoplanet-description">Description of the GIF, providing more context or information.</p>
+			</div>
+			<div id="exoplanet-chart"></div>
+			<button id="next-scene" onclick="nextScene(1)">Next</button>
+		</div>
+
+		<div id="scene-2-container" style="display: none;">
+			<h1>Navigating the Cosmic Spectrum: From Earth to Gas Giants</h1>
+			<p>Embark on an enlightening voyage through the vast expanse of known exoplanets. In this interactive
+				scatter plot, each
+				dot represents an exoplanet, with its position determined by its mass and radius. Starting from our home
+				planet, Earth,
+				we journey through the different categories of exoplanets: Terrestrial, Super-Earth, Neptunian, and the
+				Gas
+				Giants. Observe the patterns and distributions, and hover over each point to view details about
+				individual planets.</p>
+			<div id="discovery-over-time">
+
+				<button id="prev-exoplanet">Previous Exoplanet</button>
+				<button id="next-exoplanet">Next Exoplanet</button>
+			</div>
+			<button id="prev-scene" onclick="nextScene(-1)">Previous</button>
+			<button id="next-scene-2" onclick="nextScene(1)">Next</button>
+		</div>
+
+		<div id="scene-3-container" style="display: none;">
+			<h1>Exploring Exoplanets: Mass, Radius, and Host Star Spectral Types</h1>
+			<p>Dive into the vast expanse of our universe as we visualize the relationship between the mass and radius
+				of known
+				exoplanets. This interactive scatter plot groups exoplanets based on the spectral type of their host
+				star, shedding
+				light on the diverse range of celestial bodies that lie beyond our solar system. From red dwarfs to the
+				hot
+				O-type stars, observe the intriguing patterns that emerge as you explore. And as a touchstone, Earth –
+				with its G-type
+				host star, the Sun – is also plotted for context. Use the on-screen navigation to focus on different
+				star types and
+				unearth details about each category. As you hover over each data point, uncover the name, mass, and
+				radius
+				of the planet, as well as the spectral type of its host star.</p>
+			<div id="discovery-over-time">
+
+				<button id="prev-spectral">Previous Spectral Type</button>
+				<button id="next-spectral">Next Spectral Type</button>
+			</div>
+			<button id="prev-scene-2" onclick="nextScene(-1)">Previous</button>
+			<button id="next-scene-3" onclick="nextScene(1)">Next</button>
+		</div>
+
+		<div id="scene-4-container" style="display: none;">
+			<h1>Comparative Exploration of Exoplanets</h1>
+			<p>In our quest to understand the universe, exoplanets — planets outside our solar system — have always
+				intrigued us. This
+				visualization delves deep into the characteristics of known exoplanets, focusing on their mass and
+				radius, especially
+				those comparable to Earth. The exoplanets have been filtered to represent only those that orbit stars of
+				spectral type
+				G, K, and M, akin to our Sun and other cooler dwarf stars. A highlighted region represents exoplanets
+				with a mass
+				ranging from 0.8 to 2 times that of Earth, often considered pivotal in the search for life-sustaining
+				conditions. These
+				planets may possess a solid surface and an atmosphere conducive to life as we know it. By navigating
+				through the plotted
+				data points, one can gain insights into the equilibrium temperature, density, and distance from Earth
+				for each
+				exoplanet.</p>
+			<div id="discovery-over-time">
+
+			</div>
+			<button id="prev-scene-2" onclick="nextScene(-1)">Previous</button>
+			<button id="next-scene-3" onclick="nextScene(1)">Next</button>
+		</div>
+	</div>
+	<div id="data-sources-container" style="display: none;">
+		<h1>Data Sources and Citations</h1>
+		<ul>
+			<li><a href="https://doi.org/10.1093/mnras/stab897">Daria Kubyshkina , Aline A Vidotto, How does the mass
+					and
+					activity history of the host star affect the population of low-mass planets?, Monthly Notices of the
+					Royal Astronomical Society, Volume 504, Issue 2, June 2021, Pages 2034–2050</a></li>
+			<li><a
+					href="https://exoplanetarchive.ipac.caltech.edu/docs/data.html">https://exoplanetarchive.ipac.caltech.edu/docs/data.html</a>
+			</li>
+			<li><a
+					href="https://exoplanets.nasa.gov/what-is-an-exoplanet/overview/">https://exoplanets.nasa.gov/what-is-an-exoplanet/overview/</a>
+			</li>
+			<li><a
+					href="https://exoplanets.nasa.gov/what-is-an-exoplanet/planet-types/overview/">https://exoplanets.nasa.gov/what-is-an-exoplanet/planet-types/overview/</a>
+			</li>
+			<li><a
+					href="https://seec.gsfc.nasa.gov/what_makes_a_planet_habitable.html">https://seec.gsfc.nasa.gov/what_makes_a_planet_habitable.html</a>
+			</li>
+			<li><a
+					href="https://www.cs.mcgill.ca/~rwest/wikispeedia/wpcd/wp/p/Planetary_habitability.htm">https://www.cs.mcgill.ca/~rwest/wikispeedia/wpcd/wp/p/Planetary_habitability.htm</a>
+			</li>
+		</ul>
+		<button id="prev-scene-3" onclick="nextScene(-1)">Previous</button>
+		<button id="start-over" onclick="restart()">Start Over</button>
+		<!-- This will take the user back to the first page -->
+	</div>
+	<script src="scripts/chart1.js"></script>
+	<!-- <script src="scripts/chart2.js"></script> -->
+	<!-- <script src="scripts/chart3.js"></script> -->
+
+	<script>
+		let currentScene = 0;
+		const scenes = ['scene-1-container', 'scene-2-container', 'scene-3-container', 'scene-4-container', 'data-sources-container'];
+
+		function restart() {
+			document.getElementById(scenes[currentScene]).style.display = 'none';
+			currentScene = 0;
+			document.getElementById(scenes[currentScene]).style.display = 'block';
+		}
+		function nextScene(direction) {
+			document.getElementById(scenes[currentScene]).style.display = 'none';
+			currentScene += direction;
+			document.getElementById(scenes[currentScene]).style.display = 'block';
+
+			if (currentScene === 1) {
+				// Check if the script is already added
+				if (!document.getElementById("chart2-script")) {
+					// Load the second script to initiate Scene 2
+					const script = document.createElement('script');
+					script.id = 'chart2-script';
+					script.src = 'scripts/chart2.js';
+					document.body.appendChild(script);
+				}
+			}
+			if (currentScene === 2) {
+				if (!document.getElementById("chart3-script")) {
+					const script = document.createElement('script');
+					script.id = 'chart3-script';
+					script.src = 'scripts/chart3.js';
+					document.body.appendChild(script);
+				}
+			}
+			if (currentScene === 3) {
+				if (!document.getElementById("chart4-script")) {
+					const script = document.createElement('script');
+					script.id = 'chart4-script';
+					script.src = 'scripts/chart4.js';
+					document.body.appendChild(script);
+				}
+			}
+		}
+
+	</script>
+
+</body>
+
+</html>

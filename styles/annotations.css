@@ -1,0 +1,19 @@
+.annotation-note-bg {
+	fill: white;
+	/* White background */
+	stroke: #aaa;
+	/* Border color */
+	stroke-width: 1px;
+	/* Border thickness */
+	padding: 15px;
+	/* Wider padding for the text box */
+}
+
+.annotation text {
+	fill: black;
+	/* Text color */
+}
+
+.annotation.callout.rect path.subject {
+	fill-opacity: .1;
+}
