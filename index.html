@@ -43,34 +43,40 @@
 
 		<div id="scene-1-container">
 			<h1>Introduction to Exoplanets</h1>
-			<p>Welcome to "Stellar Quest", a narrative exploration into the captivating world of exoplanets. For
-				centuries, humans have
-				looked up at the night sky, wondering about the myriad worlds that might exist beyond our solar system.
-				With the advent
-				of modern telescopes and space missions, we've embarked on an incredible journey of discovery, finding
-				thousands of
-				exoplanets—planets that orbit stars outside of our solar system. These distant worlds come in a wide
-				range of
-				compositions and characteristics, from rocky planets like Earth to gas giants like Jupiter. While direct
-				imaging is
-				rare, astronomers employ various indirect methods, such as measuring the dimming of stars during
-				planetary transits or
-				observing subtle Doppler shifts in starlight, allowing us to discover and analyze these incredible
-				exoplanets. One
-				notable example is the TRAPPIST-1 system, where seven Earth-sized planets have been identified and
-				studied based on
-				their influence on each other's orbits and the properties of their host star. Through these discoveries,
-				we gain
-				invaluable insights not only into these intriguing alien worlds but also into our own home planet and
-				its place in the
-				vast cosmic arena. In this interactive visual journey, we invite you to explore the fascinating
-				diversity and patterns
-				found in the exoplanets we've discovered so far.</p>
-			<div id="exoplanet-chart"></div>
-			<div>
-				<p><a href="https://www.youtube.com/watch?v=Wa3OObe8TRI" id="exoplanet-description" >Watch 4 massive exoplanets orbit a star in a 12-year time-lapse</a></p>
-				<img src="images/Hr8799_orbit_hd.gif" alt="GIF of four exoplanets orbiting with host star" id="exoplanet-gif" />
-				<p id="exoplanet-description">12 years of W.M. Keck Observatory imagery of star system HR 8799 have been time-lapsed. The system hosts four planets that are more massive than Jupiter. </p>
+			<div class="intro-container">
+				<div class="intro-text">
+					<p>Welcome to "Stellar Quest", a narrative exploration into the captivating world of exoplanets. For
+					centuries, humans have
+					looked up at the night sky, wondering about the myriad worlds that might exist beyond our solar system.
+					With the advent
+					of modern telescopes and space missions, we've embarked on an incredible journey of discovery, finding
+					thousands of
+					exoplanets—planets that orbit stars outside of our solar system. These distant worlds come in a wide
+					range of
+					compositions and characteristics, from rocky planets like Earth to gas giants like Jupiter. While direct
+					imaging is
+					rare, astronomers employ various indirect methods, such as measuring the dimming of stars during
+					planetary transits or
+					observing subtle Doppler shifts in starlight, allowing us to discover and analyze these incredible
+					exoplanets. One
+					notable example is the TRAPPIST-1 system, where seven Earth-sized planets have been identified and
+					studied based on
+					their influence on each other's orbits and the properties of their host star. Through these discoveries,
+					we gain
+					invaluable insights not only into these intriguing alien worlds but also into our own home planet and
+					its place in the
+					vast cosmic arena. In this interactive visual journey, we invite you to explore the fascinating
+					diversity and patterns
+					found in the exoplanets we've discovered so far.</p>
+				</div>
+				<div class="intro-chart"> <!-- Wrapped the chart inside another div -->
+					<div id="exoplanet-chart"></div>
+					<div>
+						<p><a href="https://www.youtube.com/watch?v=Wa3OObe8TRI" id="exoplanet-description" >Watch 4 massive exoplanets orbit a star in a 12-year time-lapse</a></p>
+						<img src="images/Hr8799_orbit_hd.gif" alt="GIF of four exoplanets orbiting with host star" id="exoplanet-gif" />
+						<p id="exoplanet-description">12 years of W.M. Keck Observatory imagery of star system HR 8799 have been time-lapsed. The system hosts four planets that are more massive than Jupiter.</p>
+					</div>
+				</div>
 			</div>
 			
 			<button id="next-scene" onclick="nextScene(1)">Next</button>
